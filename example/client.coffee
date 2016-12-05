@@ -1,4 +1,4 @@
-@ddp = new RxDDP 'wss://www.discover-jeju.com/websocket'
+ddp = new RxDDP 'wss://www.discover-jeju.com/websocket'
 ddp.connect()
   .subscribe ->
     document.getElementById 'connecting'
