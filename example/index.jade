@@ -1,0 +1,34 @@
+head
+  title= RxDDP
+  meta(name="description" content="RxDDP Example")
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  link(rel="stylesheet" href="https://cdn.rawgit.com/acidsound/Tle-CSS/master/dist/tle.css")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.0-rc.4/Rx.min.js")
+  script(src="../lib/random.js")
+  script(src="../lib/sha256.js")
+  script(src="../lib/rxddp.js")
+  //script(src="../rxddp_full.js")
+  script(src="./client.js")
+body
+  section#connecting
+    h1 connecting to meteor.com
+  header#signInForm(class="틀 숨김")
+    h1 login to meteor.com
+    form(name="loginForm" action="#")
+      fieldset(class="행")
+        div(class="열 틈1-3 칸1-3")
+          label(for="username") username
+          input#username(type="text")
+        div(class="열 틈1-3 칸1-3")
+          label(for="password") password
+          input#password(type="password")
+        div(class="열 틈1-3 칸1-3")
+          button#login(class="오른쪽착") 로그인
+  section#tours
+    dl
+      dt ... getting tours
+  footer
+    a(href="https://github.com/acidsound/tle-css")
+      p Made with TleCSS

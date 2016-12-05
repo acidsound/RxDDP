@@ -1,0 +1,14 @@
+{
+  "name": "rxddp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "sh build.sh"
+  },
+  "author": "",
+  "license": "ISC"
+}
