@@ -31,6 +31,7 @@ class @RxDDP
           'changed': @setCollection
           'result': @methodResult
           'ready': @readySubscription
+          'nosub': @nosubscribe
         eventHandler = eventHandler[data.msg]
         eventHandler and eventHandler data
       @sock.onclose = (status)=>
@@ -61,6 +62,12 @@ class @RxDDP
       name: publicationName
       params: params
     @getStream id
+  nosubscribe: (msg)->
+    # TODO
+  unsubscribe: (id)->
+    @send
+      id: id
+      msg: 'unsub'
   readySubscription: (msg)=>
     for sub in msg.subs
       @getStream @subs[sub]
