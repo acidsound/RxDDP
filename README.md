@@ -18,8 +18,26 @@ ddp.connect.subscribe ->
 
 * close() - Ends a Websocket connection.
 * callStream() - call Meteor method. return Observable which susbscribes with any returned data.
-* subscribeStream - subscribes to server publications on the server. returns Observable which subscribes on successful. 
+
+```
+
+```
+
+* subscribeStream - subscribes to server publications on the server. returns Observable which subscribes on successful.
+ 
+```
+
+```
+
+* getCollection - Observe collections when added/removed/changed. return Observable.
+
+```
+
+```
 
 # Properties
 
 * closeObservable - returns Observable which subscribes on close connection.
+
+```
+```

@@ -456,7 +456,8 @@ return SHA256;
               'removed': _this.setCollection,
               'changed': _this.setCollection,
               'result': _this.methodResult,
-              'ready': _this.readySubscription
+              'ready': _this.readySubscription,
+              'nosub': _this.nosubscribe
             };
             eventHandler = eventHandler[data.msg];
             return eventHandler && eventHandler(data);
@@ -519,6 +520,15 @@ return SHA256;
         params: params
       });
       return this.getStream(id);
+    };
+
+    RxDDP.prototype.nosubscribe = function(msg) {};
+
+    RxDDP.prototype.unsubscribe = function(id) {
+      return this.send({
+        id: id,
+        msg: 'unsub'
+      });
     };
 
     RxDDP.prototype.readySubscription = function(msg) {
